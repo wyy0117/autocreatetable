@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/easyray?useUnicode=true&characterEncoding=utf8
+    username: easyray
+    password: easyray
+actable:
+  database:
+    type: mysql
+  model:
+    pack: com.wyy.testactable.entity
+  create:
+    mode: update
+  execute:
+    sql: true
