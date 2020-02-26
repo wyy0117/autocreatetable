@@ -22,6 +22,7 @@
     actable.model.pack：要扫描的需要建表的包路径，多个包可以使用逗号或者分号隔开
     actable.create.mode：建表的模式 none:不做修改，create：删掉旧表重新建表，update：更新表结构
     actable.execute.sql：是否要在项目启动时执行sql
+    actable.print.sql:是否打印sql语句
     ```
 #### 说明  
 本项目只在springboot环境下测试通过，spring+springmvc请自行测试和适配。  
