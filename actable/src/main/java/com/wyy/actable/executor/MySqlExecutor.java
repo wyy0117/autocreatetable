@@ -24,6 +24,9 @@ public abstract class MySqlExecutor implements SqlExecutor {
     @Value(Constants.EXECUTE_SQL_KEY_VALUE)
     private boolean executeSql;
 
+    @Value(Constants.PRINT_SQL_KEY_VALUE)
+    private boolean printSql;
+
     @Autowired
     private MysqlConnectionFactory mysqlConnectionFactory;
 
@@ -35,12 +38,14 @@ public abstract class MySqlExecutor implements SqlExecutor {
 
     @Override
     public void execute(String sql) throws SQLException {
-        for (int i = 0; i < 5; i++) {
-            System.out.println();
-        }
-        System.out.println(sql);
-        for (int i = 0; i < 5; i++) {
-            System.out.println();
+        if (printSql) {
+            for (int i = 0; i < 5; i++) {
+                System.out.println();
+            }
+            System.out.println(sql);
+            for (int i = 0; i < 5; i++) {
+                System.out.println();
+            }
         }
         if (!executeSql) {
             return;
