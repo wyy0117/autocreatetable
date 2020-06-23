@@ -286,7 +286,7 @@ public class SysMysqlCreateTableServiceImpl implements SysMysqlCreateTableServic
                     continue;
                 }
                 // 6.验证默认值
-                if (dbColumn.getColumn_default() == null || dbColumn.getColumn_default().equals("")) {
+                if (dbColumn.getColumn_default() == null) {
                     // 数据库默认值是null，model中注解设置的默认值不为NULL时，那么需要更新该字段
                     if (codeColumn.getDefaultValue() != null && !"NULL".equalsIgnoreCase(codeColumn.getDefaultValue())) {
                         modifyFieldList.add(codeColumn);
