@@ -16,7 +16,7 @@ public class Project extends BaseEntity<Long> {
     private static final long serialVersionUID = 5199200306752426433L;
 
     @Index
-    @Column(name = "name", type = MySqlDataType.VARCHAR, length = 666, defaultValue = "项目1",comment = "项目名12")
+    @Column(name = "name", type = MySqlDataType.VARCHAR, length = 666, defaultValue = "项目1", comment = "项目名12")
     private String name;
 
     @Index(name = "Idx_desc_comm")

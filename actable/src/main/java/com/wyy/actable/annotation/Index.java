@@ -10,12 +10,13 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface Index {
-	
-	/**
-	 * 索引的名字，不设置默认为{idx_当前标记字段名@Column的name}
-	 * @return
-	 */
-	public String name() default "";
+
+    /**
+     * 索引的名字，不设置默认为{idx_当前标记字段名@Column的name}
+     *
+     * @return
+     */
+    public String name() default "";
 
 }
 

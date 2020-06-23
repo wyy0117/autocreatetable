@@ -16,11 +16,12 @@ public class PropertyUtil {
 
     private static final Logger logger = LoggerFactory.getLogger(PropertyUtil.class);
     private static Properties props;
-    static{
+
+    static {
         loadProps();
     }
 
-    synchronized static private void loadProps(){
+    synchronized static private void loadProps() {
         logger.info("开始加载properties文件内容.......");
         props = new Properties();
         InputStream in = null;
@@ -33,7 +34,7 @@ public class PropertyUtil {
             logger.error("出现IOException");
         } finally {
             try {
-                if(null != in) {
+                if (null != in) {
                     in.close();
                 }
             } catch (IOException e) {
@@ -44,15 +45,15 @@ public class PropertyUtil {
         logger.info("properties文件内容：" + props);
     }
 
-    public static String getProperty(String key){
-        if(null == props) {
+    public static String getProperty(String key) {
+        if (null == props) {
             loadProps();
         }
         return props.getProperty(key);
     }
 
     public static String getProperty(String key, String defaultValue) {
-        if(null == props) {
+        if (null == props) {
             loadProps();
         }
         return props.getProperty(key, defaultValue);

@@ -9,6 +9,6 @@ import java.sql.SQLException;
  */
 public interface SysMysqlCreateTableService {
 
-	public void createMysqlTable() throws CloneNotSupportedException, SQLException;
-	
+    public void createMysqlTable() throws CloneNotSupportedException, SQLException;
+
 }

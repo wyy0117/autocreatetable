@@ -12,9 +12,10 @@ import java.lang.annotation.*;
 @Documented
 public @interface Table {
 
-	/**
-	 * 表名
-	 * @return 表名
-	 */
-	public String name();
+    /**
+     * 表名
+     *
+     * @return 表名
+     */
+    public String name();
 }
